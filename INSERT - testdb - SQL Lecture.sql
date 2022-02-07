@@ -1,0 +1,72 @@
+USE testdb;
+
+-- Ideally performed on empty database
+
+-- INSERT PERSON
+INSERT INTO PERSON  VALUES (4001, "Darwin", "Aziz", "Darwin@mail.com", "1990-01-01", "2021-11-29","Växjö", true);
+INSERT INTO PERSON VALUES (4002, "Gvargis", "Demir", "Gvargis@mail.com", "1990-01-01", "2021-11-29","Växjö", true);
+INSERT INTO PERSON VALUES (4003, "Manaf", "Sayadi", "Manaf@mail.com", "1990-01-01", "2021-11-29","Växjö", true);
+INSERT INTO PERSON VALUES (4004, "Samaar", "Ahmed", "Samaar@mail.com", "1990-01-01", "2021-11-29","Växjö", true);
+INSERT INTO PERSON VALUES (4005, "Tobias", "Lundgren", "Tobias@mail.com", "1990-01-01", "2021-11-29","Växjö", true);
+INSERT INTO PERSON VALUES (4006, "Emil", "Johansson", "Emil@mail.com", "1990-01-01", "2021-11-29","Växjö", true);
+INSERT INTO PERSON VALUES (4007, "Heilo", "Rodrigues", "Heilo@mail.com", "1990-01-01", "2021-11-29","Växjö", true);
+INSERT INTO PERSON VALUES (4008, "Antoine", "Rebelo", "Antoine@mail.com", "1990-01-01", "2021-12-13","Växjö", true);
+INSERT INTO PERSON VALUES (4009, "Susanne", "Cederholm", "Susanne@mail.com", "1990-01-01", "2021-12-13","Växjö", true);
+INSERT INTO PERSON VALUES (4010, "Pär", "Törnell", "Pär@mail.com", "1990-01-01", "2021-12-13","Växjö", true);
+
+INSERT INTO PERSON VALUES (1000, "Joe", "Doe", "Joe@mail.com", "1960-01-01", now(), "lexicon", false);
+INSERT INTO PERSON VALUES (1001, "Student", "Uni", "student1@mail.com", "1960-01-01", now(), "lexicon", false);
+INSERT INTO PERSON VALUES (1002, "Student", "Uni", "student2@mail.com", "1960-01-31", now(), "lexicon", false);
+INSERT INTO PERSON VALUES (1003, "Student", "Uni", "student3@mail.com", "1960-02-01", now(), "lexicon", false);
+INSERT INTO PERSON VALUES (1004, "Student", "Uni", "student4@mail.com", "1960-03-01", now(), "lexicon", false);
+
+
+-- INSERT TASKS WITH PERSON RELATIONSHOP
+INSERT INTO TASK VALUES (0, "Finish Assignment", "Create and Follow all instructions specified", 1000);
+INSERT INTO TASK VALUES (0, "exercises", "Work on exercies given to me", 1000);
+
+INSERT INTO TASK (TITLE, PERSON_ID) VALUES ("Task 1.1", 1001);
+INSERT INTO TASK (TITLE, PERSON_ID) VALUES ("Task 1.2", 1001);
+INSERT INTO TASK (TITLE, PERSON_ID) VALUES ("Task 1.3", 1001);
+
+INSERT INTO TASK (TITLE, PERSON_ID) VALUES ("Task 2.1", 1002);
+INSERT INTO TASK (TITLE, PERSON_ID) VALUES ("Task 2.2", 1002);
+
+INSERT INTO TASK (TITLE, PERSON_ID) VALUES ("Task 3.1", 1003);
+
+INSERT INTO TASK (TITLE, PERSON_ID) VALUES ("Task 4.1", 1004);
+
+
+-- INSERT GROUPS
+INSERT INTO GROUP_ VALUES(37, "Java Group 37");
+INSERT INTO GROUP_ VALUES(38, ".NET Group 38");
+INSERT INTO GROUP_ VALUES(39, "Java Group 39");
+INSERT INTO GROUP_ VALUES(40, "Java Group 40");
+
+
+-- INSERT RELATIONSHIPS PERSON AND GROUP
+INSERT INTO PERSON_GROUP VALUES (0,4001, 40);
+INSERT INTO PERSON_GROUP VALUES (0,4002, 40);
+INSERT INTO PERSON_GROUP VALUES (0,4003, 40);
+INSERT INTO PERSON_GROUP VALUES (0,4004, 40);
+INSERT INTO PERSON_GROUP VALUES (0,4005, 40);
+INSERT INTO PERSON_GROUP VALUES (0,4006, 40);
+INSERT INTO PERSON_GROUP VALUES (0,4007, 40);
+INSERT INTO PERSON_GROUP VALUES (0,4008, 40);
+INSERT INTO PERSON_GROUP VALUES (0,4009, 40);
+INSERT INTO PERSON_GROUP VALUES (0,4010, 40);
+INSERT INTO PERSON_GROUP VALUES (0,1000, 37);
+INSERT INTO PERSON_GROUP VALUES (0,1000, 38);
+INSERT INTO PERSON_GROUP VALUES (0,1000, 39);
+INSERT INTO PERSON_GROUP VALUES (0,1000, 40);
+
+INSERT INTO PERSON_GROUP VALUES (0,1001, 37);
+INSERT INTO PERSON_GROUP VALUES (0,1001, 38);
+
+INSERT INTO PERSON_GROUP VALUES (0,1002, 37);
+INSERT INTO PERSON_GROUP VALUES (0,1003, 37);
+INSERT INTO PERSON_GROUP VALUES (0,1004, 37);
+
+	
+ 	
+
